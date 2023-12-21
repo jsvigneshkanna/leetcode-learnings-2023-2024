@@ -10,13 +10,15 @@
  * @return {number[]}
  */
 var getConcatenation = function (nums) {
-  const numsLength = nums.length;
-  const newNums = new Array(numsLength);
-  //   console.log(newNums);
-  for (let index = 0; index < numsLength; index++) {
-    newNums[index] = nums[index];
-    newNums[index + numsLength] = nums[index];
-  }
-  return newNums;
+  //   const numsLength = nums.length;
+  //   const newNums = new Array(numsLength);
+  //   //   console.log(newNums);
+  //   for (let index = 0; index < numsLength; index++) {
+  //     newNums[index] = nums[index];
+  //     newNums[index + numsLength] = nums[index];
+  //   }
+  //   return newNums;
+
+  return [...nums, ...nums];
 };
 // @lc code=end
