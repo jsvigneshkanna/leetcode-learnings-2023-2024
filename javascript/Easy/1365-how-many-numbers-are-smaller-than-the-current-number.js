@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 var smallerNumbersThanCurrent = function(nums) {
-    const sortedNums = nums.slice().sort((a, b) => a - b);
+    const sortedNums = [...nums].sort((a, b) => a - b);
     nums.forEach((_, index, array)=> {
         nums[index] = sortedNums.indexOf(nums[index])
     })
