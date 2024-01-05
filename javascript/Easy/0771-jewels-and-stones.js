@@ -4,10 +4,10 @@
  * @return {number}
  */
 var numJewelsInStones = function(jewels, stones) {
-    jewels = new Set(jewels.split(""))
+    jewels = new Set(jewels)
     let count = 0
-    for (char of stones) {
-        if (jewels.has(char)) {
+    for (stone of stones) {
+        if (jewels.has(stone)) {
             count++
         }
     }
