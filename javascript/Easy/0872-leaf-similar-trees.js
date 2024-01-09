@@ -19,8 +19,6 @@ var leafSimilar = function(root1, root2) {
     rightLeaf = []
     getLeaf(root1, "left")
     getLeaf(root2, "right")
-    console.log(leftLeaf)
-    console.log(rightLeaf)
     
     return leftLeaf.length == rightLeaf.length && leftLeaf.every((value, index) => value === rightLeaf[index]);
 };
