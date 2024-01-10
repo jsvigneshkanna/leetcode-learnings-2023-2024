@@ -19,8 +19,8 @@ var countConsistentStrings = function(allowed, words) {
     // }
     // return consistentCount
     
-    let set = new Set(allowed)
+    allowed = new Set(allowed)
   return words.reduce((a, w) => {
-    return w.split('').every(l => set.has(l)) ? ++a : a
+    return w.split('').every(l => allowed.has(l)) ? ++a : a
   }, 0)
 };
