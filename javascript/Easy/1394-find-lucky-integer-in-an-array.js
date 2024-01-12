@@ -14,7 +14,6 @@ var findLucky = function(arr) {
             numFreq.set(num, -1)
         }
     }
-    console.log(luckies.sort())
     const result = luckies.sort((a,b)=> a-b).at(-1) || -1
     return result
 };
