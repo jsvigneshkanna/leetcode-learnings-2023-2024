@@ -16,7 +16,6 @@ var minSteps = function(s, t) {
         charMap.set(s[index], charMap.get(s[index])? charMap.get(s[index])-1: -1)
     }
     let minSteps = 0
-    console.log(charMap)
     for (const freq of charMap.values()) {
         minSteps+= Math.max(0, freq)
     }
