@@ -5,5 +5,5 @@
 # entry not there in right table, consider it as NULL
 
 select unique_id, name
-from Employees as em left join EmployeeUNI as emu
+from Employees em left join EmployeeUNI emu
 on em.id = emu.id
