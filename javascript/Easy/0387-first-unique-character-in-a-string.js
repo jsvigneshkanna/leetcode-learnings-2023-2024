@@ -3,6 +3,10 @@
  * @return {number}
  */
 var firstUniqChar = function(s) {
+    return byMap(s)
+};
+
+const byMap = (s) => {
     const charCount = new Map()
     for (const char of s) {
         charCount[char] = (charCount[char] || 0)+ 1
@@ -13,4 +17,4 @@ var firstUniqChar = function(s) {
         }
     }
     return -1
-};
+}
