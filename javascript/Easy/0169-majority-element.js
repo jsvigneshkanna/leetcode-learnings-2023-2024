@@ -3,8 +3,26 @@
  * @return {number}
  */
 var majorityElement = function(nums) {
-    return usingExtraSpace(nums)
+    // return usingExtraSpace(nums)
+    return usingNotExtraSpace(nums)
 };
+
+const usingNotExtraSpace = (nums) => {
+    let majNum = nums[0]
+    let count = 1
+    for (let index=1; index< nums.length; index++) {
+        if (count == 0) {
+            count++
+            majNum = nums[index]
+        }
+        else if (nums[index] == majNum) {
+            count++
+        }else {
+            count--
+        }
+    }
+    return majNum
+}
 
 const usingExtraSpace = (nums) => {
     const freq = new Map()
