@@ -11,6 +11,30 @@
  * @return {ListNode}
  */
 var removeNthFromEnd = function(head, n) {
+    // return with2Pass(head, n)
+    return with1Pass(head, n)
+};
+
+const with1Pass = (head, n) => {
+    let slow = head
+    let fast = head
+    for (let index=0; index<n; index++) {
+        fast = fast.next
+    }
+    if (!fast) {
+        return head.next
+    }
+    fast = fast.next
+    
+    while (fast) {
+        fast=fast.next
+        slow=slow.next
+    }
+    slow.next = slow.next.next
+    return head
+}
+
+const with2Pass = (head, n) => {
     let length = 0
     let dummyNode = head
     while (dummyNode) {
@@ -29,4 +53,4 @@ var removeNthFromEnd = function(head, n) {
     }
     head.next = head.next.next
     return result.next
-};
+}
