@@ -4,7 +4,7 @@
  * @return {number}
  */
 var getCommon = function(nums1, nums2) {
-    let common = Infinity;
+    let common = -1;
     let i = 0, j = 0;
 
     while (i < nums1.length && j < nums2.length) {
@@ -18,5 +18,5 @@ var getCommon = function(nums1, nums2) {
         }
     }
 
-    return common !== Infinity ? common : -1;
+    return common
 };
